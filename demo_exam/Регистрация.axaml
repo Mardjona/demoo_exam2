@@ -1,0 +1,26 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="demo_exam.Регистрация"
+        Title="Регистрация">
+	<StackPanel>
+	<TextBlock Text="Регистрация пользователя" FontWeight="Black"
+				   HorizontalAlignment="Center" Margin="10">
+	</TextBlock>
+	<StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center">
+		
+		<TextBox  Watermark="Введите имя" HorizontalAlignment="Center"></TextBox>
+		<TextBox Watermark="Введите фамилию" HorizontalAlignment="Center"></TextBox>
+		<TextBox  Watermark="Введите отчество" HorizontalAlignment="Center"></TextBox>
+	</StackPanel>
+		
+		<TextBox Watermark="Введите логин" Margin="10" HorizontalAlignment="Center"></TextBox>
+		<TextBox  Watermark="Введите пароль" HorizontalAlignment="Center"></TextBox>
+		<StackPanel Orientation="Horizontal"  HorizontalAlignment="Center">
+			<Button Content="Зарегистрироваться" Margin="10"></Button>
+			<Button Content="Выход" Margin="10" Background="Transparent"  ></Button>
+		</StackPanel>
+	</StackPanel>
+</Window>
