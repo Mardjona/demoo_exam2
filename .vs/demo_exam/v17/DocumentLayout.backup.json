@@ -1,7 +1,36 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\prdb\\source\\repos\\demo_exam\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E8728DD0-9AE0-4288-8C62-5A27977D5B7A}|demo_exam\\demo_exam.csproj|c:\\users\\prdb\\source\\repos\\demo_exam\\demo_exam\\editwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{E8728DD0-9AE0-4288-8C62-5A27977D5B7A}|demo_exam\\demo_exam.csproj|solutionrelative:demo_exam\\editwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8728DD0-9AE0-4288-8C62-5A27977D5B7A}|demo_exam\\demo_exam.csproj|c:\\users\\prdb\\source\\repos\\demo_exam\\demo_exam\\editwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8728DD0-9AE0-4288-8C62-5A27977D5B7A}|demo_exam\\demo_exam.csproj|solutionrelative:demo_exam\\editwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8728DD0-9AE0-4288-8C62-5A27977D5B7A}|demo_exam\\demo_exam.csproj|c:\\users\\prdb\\source\\repos\\demo_exam\\demo_exam\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8728DD0-9AE0-4288-8C62-5A27977D5B7A}|demo_exam\\demo_exam.csproj|solutionrelative:demo_exam\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8728DD0-9AE0-4288-8C62-5A27977D5B7A}|demo_exam\\demo_exam.csproj|c:\\users\\prdb\\source\\repos\\demo_exam\\demo_exam\\productwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8728DD0-9AE0-4288-8C62-5A27977D5B7A}|demo_exam\\demo_exam.csproj|solutionrelative:demo_exam\\productwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8728DD0-9AE0-4288-8C62-5A27977D5B7A}|demo_exam\\demo_exam.csproj|c:\\users\\prdb\\source\\repos\\demo_exam\\demo_exam\\productwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{E8728DD0-9AE0-4288-8C62-5A27977D5B7A}|demo_exam\\demo_exam.csproj|solutionrelative:demo_exam\\productwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8728DD0-9AE0-4288-8C62-5A27977D5B7A}|demo_exam\\demo_exam.csproj|c:\\users\\prdb\\source\\repos\\demo_exam\\demo_exam\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8728DD0-9AE0-4288-8C62-5A27977D5B7A}|demo_exam\\demo_exam.csproj|solutionrelative:demo_exam\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8728DD0-9AE0-4288-8C62-5A27977D5B7A}|demo_exam\\demo_exam.csproj|c:\\users\\prdb\\source\\repos\\demo_exam\\demo_exam\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8728DD0-9AE0-4288-8C62-5A27977D5B7A}|demo_exam\\demo_exam.csproj|solutionrelative:demo_exam\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +47,94 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\prdb\\source\\repos\\demo_exam\\demo_exam\\Models\\User.cs",
+              "RelativeDocumentMoniker": "demo_exam\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\prdb\\source\\repos\\demo_exam\\demo_exam\\Models\\User.cs",
+              "RelativeToolTip": "demo_exam\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T13:02:33.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EditWindow.axaml",
+              "DocumentMoniker": "C:\\Users\\prdb\\source\\repos\\demo_exam\\demo_exam\\EditWindow.axaml",
+              "RelativeDocumentMoniker": "demo_exam\\EditWindow.axaml",
+              "ToolTip": "C:\\Users\\prdb\\source\\repos\\demo_exam\\demo_exam\\EditWindow.axaml*",
+              "RelativeToolTip": "demo_exam\\EditWindow.axaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-15T12:26:53.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EditWindow.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\prdb\\source\\repos\\demo_exam\\demo_exam\\EditWindow.axaml.cs",
+              "RelativeDocumentMoniker": "demo_exam\\EditWindow.axaml.cs",
+              "ToolTip": "C:\\Users\\prdb\\source\\repos\\demo_exam\\demo_exam\\EditWindow.axaml.cs",
+              "RelativeToolTip": "demo_exam\\EditWindow.axaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T12:26:53.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\prdb\\source\\repos\\demo_exam\\demo_exam\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "demo_exam\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\prdb\\source\\repos\\demo_exam\\demo_exam\\Models\\Product.cs",
+              "RelativeToolTip": "demo_exam\\Models\\Product.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T12:32:08.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Helper.cs",
+              "DocumentMoniker": "C:\\Users\\prdb\\source\\repos\\demo_exam\\demo_exam\\Helper.cs",
+              "RelativeDocumentMoniker": "demo_exam\\Helper.cs",
+              "ToolTip": "C:\\Users\\prdb\\source\\repos\\demo_exam\\demo_exam\\Helper.cs",
+              "RelativeToolTip": "demo_exam\\Helper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T08:28:50.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductWindow.axaml",
+              "DocumentMoniker": "C:\\Users\\prdb\\source\\repos\\demo_exam\\demo_exam\\ProductWindow.axaml",
+              "RelativeDocumentMoniker": "demo_exam\\ProductWindow.axaml",
+              "ToolTip": "C:\\Users\\prdb\\source\\repos\\demo_exam\\demo_exam\\ProductWindow.axaml",
+              "RelativeToolTip": "demo_exam\\ProductWindow.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-14T08:25:12.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductWindow.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\prdb\\source\\repos\\demo_exam\\demo_exam\\ProductWindow.axaml.cs",
+              "RelativeDocumentMoniker": "demo_exam\\ProductWindow.axaml.cs",
+              "ToolTip": "C:\\Users\\prdb\\source\\repos\\demo_exam\\demo_exam\\ProductWindow.axaml.cs",
+              "RelativeToolTip": "demo_exam\\ProductWindow.axaml.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAQwG0AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T08:25:12.417Z",
+              "EditorCaption": ""
             }
           ]
         }

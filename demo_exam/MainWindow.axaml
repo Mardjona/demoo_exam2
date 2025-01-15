@@ -5,17 +5,47 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="demo_exam.MainWindow"
         Title="demo_exam">
-	<StackPanel Orientation="Vertical" Margin="10">
-		<TextBlock Text="Вход" FontWeight="Black" HorizontalAlignment="Center" FontSize="30"></TextBlock>
-		<TextBox Watermark="введите логин"
-				 HorizontalAlignment="Center" 
-				 Margin=" 10">
-		</TextBox>
-		<TextBox Watermark="введите пароль "
-				 HorizontalAlignment="Center">
-		</TextBox>
-		<Button Content="войти" HorizontalAlignment="Left" Margin="20 0"></Button>
-		<Button Content="Новый пользователь" Click="Button_addUser" HorizontalAlignment="Left" Margin="20 10"></Button>
-	</StackPanel>
+	<Border BorderThickness="4" BorderBrush="DarkSlateBlue" Margin="10" Height="400" Background="LightBlue">
+		<StackPanel Orientation="Vertical" Margin="10">
+			<TextBlock Text="Вход" FontWeight="Black" HorizontalAlignment="Center" FontSize="30"></TextBlock>
+			<TextBox Watermark="введите логин"
+					Name="Login_TextBox"
+					HorizontalAlignment="Center" Width="350"
+					Margin=" 10" BorderThickness="2"
+					BorderBrush="Black">
+			</TextBox>
+			
+			<TextBox Watermark="введите пароль "
+					HorizontalAlignment="Center" Name="Password_TextBox" Width="350" BorderThickness="2" BorderBrush="Black">
+			</TextBox>
+			
+			<Button Content="войти" 
+					Click="Enter_Button" 
+					HorizontalAlignment="Center"
+					Margin="20 10"
+					BorderThickness="2"
+					BorderBrush="Black">
+			</Button>
+			
+			<Button Content="войти как гость"
+					Click="EnterGuest_Button" 
+					HorizontalAlignment="Left"
+					Margin="20 10" 
+					BorderThickness="2"
+					BorderBrush="Black">
+				
+			</Button>
+			
+			<Button Content="Новый пользователь +"
+					Click="Button_addUser" 
+					HorizontalAlignment="Left"
+					Margin="20 10" 
+					BorderThickness="2"
+					BorderBrush="Black">
+				
+			</Button>
+		</StackPanel>
+	</Border>
+	
 
 </Window>

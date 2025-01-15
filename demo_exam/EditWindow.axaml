@@ -1,0 +1,25 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="demo_exam.EditWindow"
+		x:CompileBindings="False"
+        Title="EditWindow">
+	<Grid Name="ModelProduct" RowDefinitions="auto, auto, auto" ColumnDefinitions="*,*" >
+		<TextBlock Text="Редактирование товара" HorizontalAlignment="Center" FontWeight="Black" FontSize="30"></TextBlock>
+		<StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="0" Margin="10" Spacing="10">
+			<TextBox Text="{Binding ProductId}" IsReadOnly="True"  ></TextBox>
+			<TextBox Text="{Binding ProductName}"></TextBox>
+			<TextBox Text="{Binding ProdductDscription}"></TextBox>
+			<TextBox Text="{Binding ProductFacturer}"></TextBox>
+			<TextBox Text="{Binding ProductQuantityInstock}"></TextBox>
+		</StackPanel>
+		<Image Grid.Column="1" Grid.Row="1" Source="{Binding Image}" Height="300" Width="300"></Image>
+		<StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal">
+			<Button Content="Отменить" Background="Transparent"></Button>
+			<Button Content="Сохранить" ></Button>
+		</StackPanel>
+		
+	</Grid>
+</Window>

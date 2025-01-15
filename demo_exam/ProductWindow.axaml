@@ -1,0 +1,80 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="demo_exam.ProductWindow"
+		x:CompileBindings="False"
+        Title="ProductWindow">
+	<Grid RowDefinitions="auto,*,auto" ColumnDefinitions="*,auto,*" >
+		<TextBox Grid.Column="0" Grid.Row="0" Watermark="поиск" Margin="10" Name="Searche_Textbox" TextChanged="Text_Changed"></TextBox>
+		
+		<DockPanel Grid.Column="1" Grid.Row="0" Margin="10">
+			<ComboBox SelectedIndex="0" Name="Fiter_combobox" SelectionChanged="Fiter_ComboBox">
+				<ComboBoxItem Content="По стоимости"></ComboBoxItem>
+				<ComboBoxItem Content="По возрастанию"></ComboBoxItem>
+				<ComboBoxItem Content="По убыванию"></ComboBoxItem>
+			</ComboBox>
+			<ComboBox SelectedIndex="0" Margin="5 0" Name="Search_combobox" SelectionChanged="Search_ComboBox" >
+				<ComboBoxItem Content="Все производители"></ComboBoxItem>
+				<ComboBoxItem Content="M500"></ComboBoxItem>
+				<ComboBoxItem Content="Изостронг"></ComboBoxItem>
+				<ComboBoxItem Content="Knauf"></ComboBoxItem>
+				<ComboBoxItem Content="MixMaster"></ComboBoxItem>
+				<ComboBoxItem Content="ЛСР"></ComboBoxItem>
+				<ComboBoxItem Content="ВОЛМА"></ComboBoxItem>
+				<ComboBoxItem Content="Vinylon"></ComboBoxItem>
+				<ComboBoxItem Content="Павловский завод"></ComboBoxItem>
+				<ComboBoxItem Content="Weber"></ComboBoxItem>
+				<ComboBoxItem Content="Hesler"></ComboBoxItem>
+				<ComboBoxItem Content="Wenzo Roma"></ComboBoxItem>
+				<ComboBoxItem Content="Armero"></ComboBoxItem>
+				<ComboBoxItem Content="KILIMGRIN"></ComboBoxItem>
+				<ComboBoxItem Content="Исток"></ComboBoxItem>
+				<ComboBoxItem Content="Husqvarna"></ComboBoxItem>
+				<ComboBoxItem Content="Delta"></ComboBoxItem>
+			</ComboBox>
+		</DockPanel>
+		<StackPanel Orientation="Horizontal" Grid.Column="2" Grid.Row="0" Name="TextBlock_UserSurname1">
+			<Button  Content="Выход" HorizontalAlignment="Left"
+				BorderThickness="3" BorderBrush="Black"  Margin="50 0" ></Button>
+			<TextBlock Margin="5 0" Text="{Binding UserSurname}" Name="TextBlock_UserSurname" FontWeight="Black"></TextBlock>
+			<TextBlock Margin="5 0" Text="{Binding UserName}" Name="TextBlock_UserName" FontWeight="Black"></TextBlock>
+			<TextBlock Text="{Binding UserPatronomic}" Name="TextBlock_UserPatronimuc" FontWeight="Black"></TextBlock>
+		</StackPanel>
+
+		<Border BorderThickness="2" BorderBrush="Black" Grid.Row="1" Grid.ColumnSpan="3" Margin="10">
+			<Grid>
+				<ListBox Name="ProductListbox" PointerReleased="EditProduct">
+					<ListBox.ItemTemplate>
+						<DataTemplate>
+							<Border BorderBrush="Gray" BorderThickness="2">
+							<Grid ColumnDefinitions="auto, 3*, *">
+								<Image Grid.Column="0" Source="{Binding Image}" Margin="10" Width="150" Height="150"></Image>
+								<StackPanel Grid.Column="1" Orientation="Vertical" Margin="10" Spacing="5">
+									<TextBlock Text="Наименование товара:" FontWeight="Black"></TextBlock>
+									<TextBlock Text="{Binding ProductName}"></TextBlock>
+									<TextBlock Text="Описание товара:" FontWeight="Black"></TextBlock>
+									<TextBlock Text="{Binding ProdductDscription}" TextWrapping="Wrap"></TextBlock>
+									<TextBlock Text="Производитель:" FontWeight="Black"></TextBlock>
+									<TextBlock Text="{Binding ProductFacturer}"></TextBlock>
+									<TextBlock Text="Цена:" FontWeight="Black"></TextBlock>
+									<TextBlock Text="{Binding GetCost}"></TextBlock>
+								</StackPanel>
+								<StackPanel Grid.Column="2" Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center">
+									<TextBlock  Text="Наличие на складе:" FontWeight="Black" Margin="10 0"></TextBlock>
+									<TextBlock  Text="{Binding GetQuantity}"></TextBlock>
+								</StackPanel>
+								
+							</Grid>
+							</Border>
+						</DataTemplate>
+					</ListBox.ItemTemplate>
+				</ListBox>
+			</Grid>
+		</Border>
+		
+		
+		
+	</Grid>
+</Window>

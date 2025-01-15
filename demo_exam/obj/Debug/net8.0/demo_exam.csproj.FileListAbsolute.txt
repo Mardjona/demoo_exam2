@@ -114,7 +114,6 @@ C:\Users\prdb\source\repos\demo_exam\demo_exam\obj\Debug\net8.0\demo_exam.Genera
 C:\Users\prdb\source\repos\demo_exam\demo_exam\obj\Debug\net8.0\demo_exam.AssemblyInfoInputs.cache
 C:\Users\prdb\source\repos\demo_exam\demo_exam\obj\Debug\net8.0\demo_exam.AssemblyInfo.cs
 C:\Users\prdb\source\repos\demo_exam\demo_exam\obj\Debug\net8.0\demo_exam.csproj.CoreCompileInputs.cache
-C:\Users\prdb\source\repos\demo_exam\demo_exam\obj\Debug\net8.0\demo_exam.sourcelink.json
 C:\Users\prdb\source\repos\demo_exam\demo_exam\obj\Debug\net8.0\Avalonia\references
 C:\Users\prdb\source\repos\demo_exam\demo_exam\obj\Debug\net8.0\Avalonia\original.dll
 C:\Users\prdb\source\repos\demo_exam\demo_exam\obj\Debug\net8.0\Avalonia\original.pdb

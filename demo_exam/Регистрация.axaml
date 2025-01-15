@@ -20,7 +20,7 @@
 		<TextBox  Watermark="Введите пароль" HorizontalAlignment="Center"></TextBox>
 		<StackPanel Orientation="Horizontal"  HorizontalAlignment="Center">
 			<Button Content="Зарегистрироваться" Margin="10"></Button>
-			<Button Content="Выход" Margin="10" Background="Transparent"  ></Button>
+			<Button Click ="BackButton" Content="Выход" Margin="10" Background="Transparent"  ></Button>
 		</StackPanel>
 	</StackPanel>
 </Window>

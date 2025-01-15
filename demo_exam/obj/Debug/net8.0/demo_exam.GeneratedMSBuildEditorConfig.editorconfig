@@ -28,7 +28,13 @@ build_property.EnableGeneratedComInterfaceComImportInterop =
 [C:/Users/prdb/source/repos/demo_exam/demo_exam/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/prdb/source/repos/demo_exam/demo_exam/EditWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/prdb/source/repos/demo_exam/demo_exam/MainWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/prdb/source/repos/demo_exam/demo_exam/ProductWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/prdb/source/repos/demo_exam/demo_exam/Регистрация.axaml]
