@@ -16,6 +16,10 @@ public partial class User11028Context : DbContext
     {
     }
 
+    public virtual DbSet<Category> Categories { get; set; }
+
+    public virtual DbSet<Manufacture> Manufactures { get; set; }
+
     public virtual DbSet<Order> Orders { get; set; }
 
     public virtual DbSet<Product> Products { get; set; }
@@ -30,6 +34,34 @@ public partial class User11028Context : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<Category>(entity =>
+        {
+            entity.HasKey(e => e.CategoryId).HasName("category_pk");
+
+            entity.ToTable("category");
+
+            entity.Property(e => e.CategoryId)
+                .UseIdentityAlwaysColumn()
+                .HasColumnName("category_id");
+            entity.Property(e => e.Name)
+                .HasColumnType("character varying")
+                .HasColumnName("name");
+        });
+
+        modelBuilder.Entity<Manufacture>(entity =>
+        {
+            entity.HasKey(e => e.IdManufacture).HasName("manufacture_pk");
+
+            entity.ToTable("manufacture");
+
+            entity.Property(e => e.IdManufacture)
+                .UseIdentityAlwaysColumn()
+                .HasColumnName("id_manufacture");
+            entity.Property(e => e.Name)
+                .HasColumnType("character varying")
+                .HasColumnName("name");
+        });
+
         modelBuilder.Entity<Order>(entity =>
         {
             entity.HasKey(e => e.OrderId).HasName("order_pk");
@@ -88,9 +120,7 @@ public partial class User11028Context : DbContext
             entity.Property(e => e.ProductArticle)
                 .HasColumnType("character varying")
                 .HasColumnName("product_article");
-            entity.Property(e => e.ProductCategory)
-                .HasColumnType("character varying")
-                .HasColumnName("product_category");
+            entity.Property(e => e.ProductCategory).HasColumnName("product_category");
             entity.Property(e => e.ProductCost).HasColumnName("product_cost");
             entity.Property(e => e.ProductDiscountAmount).HasColumnName("product_discount_amount");
             entity.Property(e => e.ProductFacturer).HasColumnName("product_facturer");
@@ -102,6 +132,14 @@ public partial class User11028Context : DbContext
                 .HasColumnName("product_photo");
             entity.Property(e => e.ProductQuantityInstock).HasColumnName("product_quantity_instock");
             entity.Property(e => e.ProductStatus).HasColumnName("product_status");
+
+            entity.HasOne(d => d.ProductCategoryNavigation).WithMany(p => p.Products)
+                .HasForeignKey(d => d.ProductCategory)
+                .HasConstraintName("product_category_fk");
+
+            entity.HasOne(d => d.ProductFacturerNavigation).WithMany(p => p.Products)
+                .HasForeignKey(d => d.ProductFacturer)
+                .HasConstraintName("product_manufacture_fk");
         });
 
         modelBuilder.Entity<Role>(entity =>

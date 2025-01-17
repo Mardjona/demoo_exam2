@@ -1,6 +1,7 @@
 ﻿using Avalonia.Media.Imaging;
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace demo_exam.Models;
 
@@ -14,11 +15,12 @@ public partial class Product
 
     public string? ProdductDscription { get; set; }
 
-    public string? ProductCategory { get; set; }
+    public int? ProductCategory { get; set; }
 
     public string? ProductPhoto { get; set; }
+    public Bitmap? Image => File.Exists($"ТОвар/{ProductPhoto}") ? new Bitmap($"./ТОвар/{ProductPhoto}") : new Bitmap($"./ТОвар/picture.png");
 
-    public string? ProductFacturer { get; set; }
+    public int? ProductFacturer { get; set; }
 
     public decimal? ProductCost { get; set; }
     public string? GetCost => ProductCost + " руб.";
@@ -30,7 +32,9 @@ public partial class Product
 
     public string? ProductStatus { get; set; }
 
-    public Bitmap? Image => ProductPhoto != null ? new Bitmap($"./ТОвар/{ProductPhoto}") : null;
+    public virtual Category? ProductCategoryNavigation { get; set; }
+
+    public virtual Manufacture? ProductFacturerNavigation { get; set; }
 
     public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
 }

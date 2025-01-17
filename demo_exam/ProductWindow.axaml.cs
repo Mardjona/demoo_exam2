@@ -1,6 +1,7 @@
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Input;
+using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using demo_exam.Models;
 using Microsoft.EntityFrameworkCore;
@@ -46,13 +47,13 @@ public partial class ProductWindow : Window
     }
     private void ProductLoad()
     {
-        List<Product> products = Helper.DataBase.Products.ToList();
+        List<Product> products = Helper.DataBase.Products.Include(x=> x.ProductFacturerNavigation).ToList();
         if (Searche_Textbox == null || Search_combobox == null || Fiter_combobox == null) return;
 
         if(!string.IsNullOrEmpty(Searche_Textbox.Text))
         {
             products = products.Where(x => x.ProdductDscription.ToLower().Contains(Searche_Textbox.Text.ToLower()) || x.ProductCost.ToString().ToLower().Contains(Searche_Textbox.Text) 
-           || x.ProductName.ToLower().Contains(Searche_Textbox.Text.ToLower()) || x.ProductFacturer.ToLower().Contains(Searche_Textbox.Text.ToLower())
+           || x.ProductName.ToLower().Contains(Searche_Textbox.Text.ToLower()) || x.ProductFacturer.ToString().ToLower().Contains(Searche_Textbox.Text.ToLower())
             || x.ProductQuantityInstock.ToString().ToLower().Contains(Searche_Textbox.Text)).ToList();
         }
         else
@@ -67,27 +68,8 @@ public partial class ProductWindow : Window
             default: products = products.ToList(); break;    
 
         }
-        switch(Search_combobox.SelectedIndex)
-        {
-            case 0: products = products.ToList(); break;
-            case 1: products = products.Where(x => x.ProductFacturer == "M500").ToList(); break;
-            case 2: products = products.Where(x => x.ProductFacturer == "Изостронг").ToList(); break; 
-            case 3: products = products.Where(x => x.ProductFacturer == "Knauf").ToList(); break;
-            case 4: products = products.Where(x => x.ProductFacturer == "MixMaster").ToList(); break;
-            case 5: products = products.Where(x => x.ProductFacturer == "ЛСР").ToList(); break;
-            case 6: products = products.Where(x => x.ProductFacturer == "ВОЛМА").ToList(); break;
-            case 7: products = products.Where(x => x.ProductFacturer == "Vinylon").ToList(); break;
-            case 8: products = products.Where(x => x.ProductFacturer == "Павловский завод").ToList(); break;
-            case 9: products = products.Where(x => x.ProductFacturer == "Weber").ToList(); break;
-            case 10: products = products.Where(x => x.ProductFacturer == "Hesler").ToList(); break;
-            case 11: products = products.Where(x => x.ProductFacturer == "Wenzo Roma").ToList(); break;
-            case 12: products = products.Where(x => x.ProductFacturer == "Armero").ToList(); break;
-            case 13: products = products.Where(x => x.ProductFacturer == "KILIMGRIN").ToList(); break;
-            case 14: products = products.Where(x => x.ProductFacturer == "Исток").ToList(); break;
-            case 15: products = products.Where(x => x.ProductFacturer == "Husqvarna").ToList(); break;
-            case 16: products = products.Where(x => x.ProductFacturer == "Delta").ToList(); break;
-            default: products = products.ToList(); break;
-        }
+        
+       
 
         
 
@@ -110,20 +92,26 @@ public partial class ProductWindow : Window
         //}
         ProductListbox.ItemsSource = products.ToList();
     }
-    public void EditProduct( object? sender, PointerReleasedEventArgs e )
-    {
-        var product = ProductListbox?.SelectedItem as Product;
-       if (curentRole.RoleId == 1)
-        {
-            EditWindow editWindow = new EditWindow(product);
-            editWindow.Show();
-            this.Close();
-        }
-
-
-    }
     private void Text_Changed(object? sender, TextChangedEventArgs textChangedEventArgs) => ProductLoad();
     private void Fiter_ComboBox(object? sender, SelectionChangedEventArgs selectionChangedEventArgs) => ProductLoad();
     private void Search_ComboBox(object? sender, SelectionChangedEventArgs selectionChangedEventArgs) => ProductLoad();
 
+    private void EditProduct(object? sender, Avalonia.Controls.SelectionChangedEventArgs e)
+    {
+        var product = ProductListbox?.SelectedItem as Product;
+       
+        if (curentRole.RoleId == 1)
+        {
+            EditWindow editWindow = new EditWindow(curentRole, product);
+           // EditWindow editWindow = curentRole == null ? new  EditWindow(product):new EditWindow(product, curentRole);
+            editWindow.Show();
+            this.Close();
+        }
+    }
+    private void Enter_button( object? sender, RoutedEventArgs routedEventArgs)
+    {
+        MainWindow mainWindow = new MainWindow();   
+        mainWindow.Show();  
+        this.Close();
+    }
 }

@@ -6,19 +6,44 @@
         x:Class="demo_exam.EditWindow"
 		x:CompileBindings="False"
         Title="EditWindow">
-	<Grid Name="ModelProduct" RowDefinitions="auto, auto, auto" ColumnDefinitions="*,*" >
-		<TextBlock Text="Редактирование товара" HorizontalAlignment="Center" FontWeight="Black" FontSize="30"></TextBlock>
-		<StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="0" Margin="10" Spacing="10">
-			<TextBox Text="{Binding ProductId}" IsReadOnly="True"  ></TextBox>
+	<Grid Name="ModelProduct" RowDefinitions="auto, auto, auto" ColumnDefinitions="*,*,auto" >
+		<TextBlock Text="Редактирование" HorizontalAlignment="Center" FontWeight="Black" FontSize="28" ></TextBlock>
+		<StackPanel Grid.Row="1" Grid.Column="0"  Margin="100 20 " Spacing="25">
+			<TextBlock Text="ID товара" FontWeight="Black"></TextBlock>
+			<TextBlock Text="Наименование" FontWeight="Black"></TextBlock>
+			<TextBlock Text="Описание" FontWeight="Black"></TextBlock>
+			<TextBlock Text="Производитель" FontWeight="Black"></TextBlock>
+			<TextBlock Text="Количесво на складе" FontWeight="Black"></TextBlock>
+			<TextBlock Text="Цена за единицу" FontWeight="Black"></TextBlock>
+			<TextBlock Text="Категория" FontWeight="Black"></TextBlock>
+			<TextBlock Text=""></TextBlock>
+		</StackPanel>
+		<StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1" Margin="10" Spacing="10">
+			<TextBox Text="{Binding ProductId}" IsReadOnly="True" Background="LightGray"  ></TextBox>
 			<TextBox Text="{Binding ProductName}"></TextBox>
 			<TextBox Text="{Binding ProdductDscription}"></TextBox>
-			<TextBox Text="{Binding ProductFacturer}"></TextBox>
+			<ComboBox Foreground="Black" Width="200" Name="ComboBoxFacture" >
+				<ComboBox.ItemTemplate >
+					<DataTemplate>
+						<TextBlock Text="{Binding ProductFacturer}"  ></TextBlock>
+					</DataTemplate>
+				</ComboBox.ItemTemplate>
+			</ComboBox>
 			<TextBox Text="{Binding ProductQuantityInstock}"></TextBox>
+			<TextBox Text="{Binding ProductCost}"></TextBox>
+			<ComboBox Foreground="Black" Width="200" Name="ComboBoxCategory" SelectedIndex="0" >
+			
+				<ComboBox.ItemTemplate>
+					<DataTemplate>
+						<TextBlock Text="{Binding ProductCategory}"></TextBlock>
+					</DataTemplate>
+				</ComboBox.ItemTemplate>
+			</ComboBox>
 		</StackPanel>
-		<Image Grid.Column="1" Grid.Row="1" Source="{Binding Image}" Height="300" Width="300"></Image>
+		<Image Grid.Column="2" Grid.Row="1" Source="{Binding Image}" Height="300" Width="300"></Image>
 		<StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal">
-			<Button Content="Отменить" Background="Transparent"></Button>
-			<Button Content="Сохранить" ></Button>
+			<Button Content="Отменить" Background="Transparent" Click="Cansel_Button" ></Button>
+			<Button Content="Сохранить" Click="Save_Button" ></Button>
 		</StackPanel>
 		
 	</Grid>
